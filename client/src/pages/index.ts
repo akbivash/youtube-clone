@@ -1,0 +1,6 @@
+export {default as Channel} from './Channel'
+export {default as ErrorPage} from './ErrorPage'
+export {default as SearchResults} from './SearchResults'
+export {default as Subscriptions} from './Subscriptions'
+export {default as Homepage} from './Homepage'
+export {default as Watch} from './Watch'
