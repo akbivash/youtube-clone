@@ -16,10 +16,10 @@ const CategoriesBar = () => {
 const dispatch = useDispatch()
 
 
-console.log(categories)
+
   return (
    <>
-   {categories !== undefined && categories.length !== 0 ?  <div
+   {categories && categories.length > 0 ?  <div
       className={`relative w-full z-20 transition-all duration-200 overflow-hidden  flex items-center my-[2vh]    `}
     >
       {scrollBar.scrollLeft > 0 && (
