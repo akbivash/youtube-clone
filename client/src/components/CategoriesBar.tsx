@@ -14,9 +14,9 @@ const CategoriesBar = () => {
   const { categories } = useCategories();
   const category = useSelector((s:InitialState) => s.videos.selectedCategory)
 const dispatch = useDispatch()
-console.log(categories);
 
 
+console.log(categories)
   return (
    <>
    {categories !== undefined && categories.length !== 0 ?  <div
