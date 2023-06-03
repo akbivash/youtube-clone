@@ -74,7 +74,7 @@ const SearchResults = () => {
 
       {showSuggestionBox && debouncedSearch !== "" && (
         <div className="font-bold absolute left-0  dark:bg-stone-900 p-2 sm:p-4 h-fit  grid gap-4 top-12 bg-white rounded-md w-full  ">
-          {suggestions !== undefined && suggestions.length !== 0 &&
+          {suggestions && suggestions.length > 0 &&
             suggestions.map((s: SearchSuggestion) => {
               return (
                 <Link
