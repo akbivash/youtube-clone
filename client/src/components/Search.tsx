@@ -33,7 +33,6 @@ const SearchResults = () => {
     dispatch(closeSearchBar());
   };
 
-  console.log(suggestions)
   return (
     <div
       className={`${
