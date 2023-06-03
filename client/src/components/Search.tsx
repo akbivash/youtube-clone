@@ -72,9 +72,9 @@ const SearchResults = () => {
         </span>
       </div>
 
-      {showSuggestionBox && debouncedSearch !== "" && (
+      {showSuggestionBox && debouncedSearch !== "" &&  Array.isArray(suggestions) && suggestions.length > 0 && (
         <div className="font-bold absolute left-0  dark:bg-stone-900 p-2 sm:p-4 h-fit  grid gap-4 top-12 bg-white rounded-md w-full  ">
-          {suggestions && suggestions.length > 0 &&
+          {
             suggestions.map((s: SearchSuggestion) => {
               return (
                 <Link

@@ -53,7 +53,7 @@ const dispatch = useDispatch()
                   All
                 </span>
               )}
-              {categories !== undefined && categories.length !== 0 &&
+              {categories !== undefined && categories.length !== 0 &&  Array.isArray(categories)  &&
                 categories.map((c: Category) => {
                   if (c.id === category) {
                     return (
