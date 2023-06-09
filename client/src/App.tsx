@@ -54,7 +54,7 @@ let theme = useSelector((s:InitialState) => s.theme)
           </div>
         </div>
 
-        <div className="grid flex-1 overflow-y-scroll mt-[6vh]  xs:mt-[8vh] h-[92vh] px-1 sm:px-10  bg-white  dark:bg-stone-900">
+        <div className="grid flex-1 overflow-y-scroll mt-[6vh]  xs:mt-[8vh] h-[92vh] px-1 sm:px-10  bg-white  dark:bg-stone-950">
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/subscriptions" element={<Subscriptions />} />

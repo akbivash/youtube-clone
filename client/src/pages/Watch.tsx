@@ -38,10 +38,10 @@ const Watch = () => {
   
   return (
     <>
-     
-        <div className="grid bg-white w-full m-0 dark:bg-stone-900 place-items-center md:flex items-start gap-4 mt-[2vh] p-1 xs:p-4 ">
+    
+        <div className="grid bg-white w-full m-0 dark:bg-stone-950 place-items-center md:flex items-start gap-4 mt-[2vh] p-1 xs:p-4 ">
         {video !== undefined && video.id !== undefined ? (
-          <div className=" flex-1 grid  gap-4 xs:gap-8  dark:bg-stone-900 bg-white  text-gray-dark dark:text-white">
+          <div className=" flex-1 grid  gap-4 xs:gap-8  dark:bg-stone-950 bg-white  text-gray-dark dark:text-white">
             <div className="w-full grid place-items-center  mx-auto  rounded-md ">
               <iframe
                 src={`https://www.youtube.com/embed/${video.id}`}
@@ -68,7 +68,7 @@ const Watch = () => {
                   <span>{formatSubs} subscribers</span>
                 </div>
               </Link>
-              <button className="bg-stone-900 cursor-default text-sm  dark:bg-white dark:text-stone-900">
+              <button className="bg-stone-950 cursor-default text-sm  dark:bg-white dark:text-stone-900">
                 Subscribe
               </button>
             </div>
@@ -88,7 +88,7 @@ const Watch = () => {
             </div>
 
        
-            <div className="dark:bg-stone-950 bg-zinc-200 p-4 rounded-md">
+            <div className="dark:bg-stone-900 bg-zinc-200 p-4 rounded-md">
               <div className="flex gap-2 font-bold">
                 <span>
                   {formattedData.formattedViews !== undefined &&
@@ -97,7 +97,7 @@ const Watch = () => {
                 </span>
                 <span>{formattedData.formattedTime}</span>
               </div>
-              <p className="break-all">
+              <p className="break-all ">
                 {showMore
                   ? video.snippet.description
                   : video.snippet.description.slice(0, 250)}
@@ -118,10 +118,12 @@ const Watch = () => {
             <Comments />
           </div>
           ) : <WatchSkeleton/>}
-           <div className=" flex-[.5] hidden md:grid gap-4">
+
+          {video !== undefined && video.id !== undefined  &&  <div className=" flex-[.5] hidden md:grid gap-4">
            <CategoriesBar/>
             <Videos/>
-            </div>
+            </div>}
+          
         </div>
       
     </>

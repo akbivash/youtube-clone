@@ -91,7 +91,7 @@ const dispatch = useDispatch()
         </span>
       )}
     </div> :<div 
-       className="w-[90%]  flex gap-4 mt-3 category overflow-x-auto    mx-auto"
+       className="w-[90%]  flex gap-4 my-[2vh] category overflow-x-auto    mx-auto"
     >
    { array.map((a, i: any) => {
     return (
